@@ -1,0 +1,14 @@
+{
+  "name": "gradients",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LeonMontealegre/Gradients",
+  "author": "Leon Montealegre <leonm99@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
