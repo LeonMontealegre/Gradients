@@ -1,0 +1,137 @@
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    left: 0;
+    right: 0;
+    height: calc(100vh);
+}
+#container > h1:first-child {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    font-size: 72px;
+}
+#container > h1 {
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1.0); }
+    100% { transform: scale(1.5); }
+}
+#win-text {
+    background-image: linear-gradient(60deg, #366ae4, #c25b20);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    animation: bounce 1s linear 0s infinite alternate-reverse;
+
+    color: transparent;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+#options > div > label {
+    font-weight: bold;
+}
+#options > div > output {
+    display: inline-block;
+    width: 25px;
+    margin-left: 10px;
+}
+#options > div > input {
+    width: 200px;
+}
+#options > #button {
+    width: 100%;
+
+    margin-top: 10px;
+}
+#difficulty-container {
+    align-self: center;
+    margin-top: 5px;
+}
+
+#card-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    width: 90%;
+    max-width: 1000px;
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#card-columns > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-radius: 10px;
+}
+#card-columns > div > div {
+    width: 140px;
+    height: 100px;
+    margin-top: -30px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(20, 20, 20, 0.5);
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: all 0.2s, opacity 5s;
+}
+#card-columns > div > div:first-child:not(.hidden) {
+    border-style: dashed;
+    border-width: 2px;
+}
+#card-columns > div > .active {
+    transform: scale(1.1);
+    border: 1px solid rgba(108, 222, 108, 0.5);
+}
+#card-columns > div > .hidden {
+    opacity: 0;
+
+    pointer-events: none;
+
+    border: none;
+}
+#card-columns > div > div:first-child {
+    margin-top: 0;
+}
+#card-columns > div > div:hover {
+    transform: scale(1.1);
+}
+#card-columns > div > div:first-child:hover {
+    transform: initial;
+}

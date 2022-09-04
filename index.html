@@ -1,0 +1,48 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="container">
+        <h1>GRADIENTS</h1>
+        <div id="options">
+            <div>
+                <label for="num-cols-slider">Num Cols</label>
+                <output>3</output>
+                <input id="num-cols-slider" type="range" min="1" max="5" value="3" step="1" oninput="this.previousElementSibling.value = this.value" />
+            </div>
+            <div>
+                <label for="num-cards-slider">Num Cards</label>
+                <output>5</output>
+                <input id="num-cards-slider" type="range" min="5" max="40" value="5" step="1" oninput="this.previousElementSibling.value = this.value" />
+            </div>
+            <div>
+                <label for="gradient-range-slider">Gradient Range</label>
+                <output>50</output>
+                <input id="gradient-range-slider" type="range" min="15" max="120" value="50" step="1" oninput="this.previousElementSibling.value = this.value" />
+            </div>
+            <div>
+                <label for="gradient-overlap-slider">Gradient Overlap</label>
+                <output>30</output>
+                <input id="gradient-overlap-slider" type="range" min="0" max="355" value="30" step="1" oninput="this.previousElementSibling.value = this.value" />
+            </div>
+            <!-- <div>
+                <label for="gradient-variance-slider">Overlap Variance</label>
+                <output>0.3</output>
+                <input id="gradient-variance-slider" type="range" min="0" max="1" value="0.3" step="0.01" oninput="this.previousElementSibling.value = this.value" />
+            </div> -->
+            <div id="difficulty-container">
+                Difficulty: <span id="approx-difficulty"></span>
+            </div>
+            <button id="button">Generate Gradient</button>
+        </div>
+        <h1 id="win-text" style="opacity: 0;">You Win!</h1>
+        <h2 id="num-swaps-text" style="margin-bottom: 0;">Num Swaps: 0</h2>
+        <h4 id="swaps-info-text">Par: 0, Least: 0</h4>
+        <div id="card-columns"></div>
+    </div>
+
+    <script src="./utils.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
